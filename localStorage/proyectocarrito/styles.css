@@ -1,0 +1,207 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-size: cover; 
+    background-image: url('fondo.jpg');
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+    background-color: #1E1E1E; /* Fondo oscuro para resaltar el azul */
+}
+
+.logo{
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantener la proporción */
+
+}
+
+h1 {
+    background-color: transparent; 
+    padding: 20px;
+    color: #ffffff; /* Azul PS */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.producto {
+    background-color: transparent; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 220px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    color: #ffffff; 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+    transform: scale(1.1);
+}
+
+.producto h3 {
+    margin: 10px 0 5px;
+}
+
+.producto p {
+    margin: 5px 0;
+}
+
+.producto button {
+    background-color: #ffffff; /* Azul PS */
+    color: rgb(13, 116, 212);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #80c2f1; /* Azul más oscuro */
+    transform: scale(1.1);
+}
+
+.producto button:active {
+    transform: scale(0.95);
+}
+
+.carrito {
+    background-color: transparent; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgb(245, 244, 244);
+    color: #ffffff; 
+}
+
+.carrito h2 {
+    margin: 0;
+}
+
+.carrito ul {
+    list-style: none;
+    padding: 0;
+}
+
+.carrito li {
+    margin: 10px 0;
+}
+
+.carrito button {
+    color: rgb(13, 116, 212);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.carrito button:hover {
+    transform: scale(1.1);
+}
+
+.carrito button:active {
+    transform: scale(0.95);
+}
+
+/* Estilos para el botón de eliminar */
+.eliminar {
+    background-color: rgba(255, 0, 0, 0.815); /* Color de fondo rojo */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.eliminar:hover {
+    background-color: darkred; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.1);
+
+}
+
+.eliminar:active {
+    transform: scale(0.95);
+}
+
+#formulario-pago {
+    background-color: #ffffff; 
+    border-radius: 10px;
+    padding: 50px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    display: block;
+    color: #000000; 
+}
+
+#formulario-pago h2 {
+    margin: 0;
+}
+
+#formulario-pago input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #0072C6; /* Azul PS */
+}
+
+#mensaje {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: large;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;   
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+h3 a {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: large;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;   
+    text-shadow: 0px 4px 8px rgba(0, 0, 3, 3);
+}
+
+h3 a:hover {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+    color: #a0ff07;
+}
+ 

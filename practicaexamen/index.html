@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediente Académico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input[type="text"] {
+            width: calc(100% - 8px);
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Expediente Académico</h1>
+    
+    <label for="moduleCount">Número de módulos:</label>
+    <input type="text" id="moduleCount" placeholder="Introduce el número de módulos">
+
+    <div id="modulesContainer"></div>
+
+    <button onclick="calculateExpediente()">Calcular Expediente</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+function calculateExpediente() {
+    const moduleCount = parseInt(document.getElementById('moduleCount').value);
+    if (isNaN(moduleCount) || moduleCount <= 0) {
+        alert("Por favor, introduce un número válido de módulos.");
+        return;
+    }
+
+    let modulesContainer = document.getElementById('modulesContainer');
+    modulesContainer.innerHTML = '';
+
+    for (let i = 1; i <= moduleCount; i++) {
+        modulesContainer.innerHTML += `<label>Calificación del Módulo ${i}:</label><input type="text" id="module${i}" placeholder="Introduce la calificación"><br />`;
+    }
+
+    document.getElementById('result').innerHTML = '';
+}
+
+function showExpediente() {
+    const moduleCount = parseInt(document.getElementById('moduleCount').value);
+    let approvedModules = 0;
+    let totalScore = 0;
+
+    for (let i = 1; i <= moduleCount; i++) {
+        const score = parseFloat(document.getElementById(`module${i}`).value);
+        if (!isNaN(score)) {
+            totalScore += score;
+            if (score >= 5) {
+                approvedModules++;
+            }
+        } else {
+            alert("Por favor, introduce una calificación válida para todos los módulos.");
+            return;
+        }
+    }
+
+    const averageScore = totalScore / moduleCount;
+
+    document.getElementById('result').innerHTML = `
+        <p>Número de módulos aprobados: ${approvedModules}</p>
+        <p>Número de módulos suspensos: ${moduleCount - approvedModules}</p>
+        <p>Media aritmética de todos los módulos: ${averageScore.toFixed(2)}</p>
+    `;
+}
+</script>
+
+</body>
+</html

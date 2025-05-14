@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Videojuegos PS4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Tienda de Videojuegos PS4</h1>
+    <img src="ps44.jpg" class="logo">
+
+    <!-- Productos -->
+    <div class="contenedor">
+        <div class="producto" data-nombre="The Last of Us Part II" data-precio="60">
+            <img src="the.jpg" alt="The Last of Us Part II">
+            <h3>The Last of Us Part II</h3>
+            <p>60€</p>
+            <button onclick="cambiarCantidad('The Last of Us Part II', -1)">-</button>
+            <span id="cantidad-The Last of Us Part II">0</span>
+            <button onclick="cambiarCantidad('The Last of Us Part II', 1)">+</button>
+            <button onclick="agregarAlCarrito('The Last of Us Part II', 60, 'cantidad-The Last of Us Part II')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="Minecraft" data-precio="30">
+            <img src="mine.jpg" alt="Minecraft">
+            <h3>Minecraft</h3>
+            <p>30€</p>
+            <button onclick="cambiarCantidad('Minecraft', -1)">-</button>
+            <span id="cantidad-Minecraft">0</span>
+            <button onclick="cambiarCantidad('Minecraft', 1)">+</button>
+            <button onclick="agregarAlCarrito('Minecraft', 30, 'cantidad-Minecraft')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="Spider-Man" data-precio="50">
+            <img src="spider.jpg" alt="Spider-Man">
+            <h3>Spider-Man</h3>
+            <p>50€</p>
+            <button onclick="cambiarCantidad('Spider-Man', -1)">-</button>
+            <span id="cantidad-Spider-Man">0</span>
+            <button onclick="cambiarCantidad('Spider-Man', 1)">+</button>
+            <button onclick="agregarAlCarrito('Spider-Man', 50, 'cantidad-Spider-Man')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="God of War" data-precio="60">
+            <img src="god.jpg" alt="God of War">
+            <h3>God of War</h3>
+            <p>60€</p>
+            <button onclick="cambiarCantidad('God of War', -1)">-</button>
+            <span id="cantidad-God of War">0</span>
+            <button onclick="cambiarCantidad('God of War', 1)">+</button>
+            <button onclick="agregarAlCarrito('God of War', 60, 'cantidad-God of War')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="FIFA 25" data-precio="50">
+            <img src="fifa25.jpg" alt="FIFA 25">
+            <h3>FIFA 25</h3>
+            <p>50€</p>
+            <button onclick="cambiarCantidad('FIFA 25', -1)">-</button>
+            <span id="cantidad-FIFA 25">0</span>
+            <button onclick="cambiarCantidad('FIFA 25', 1)">+</button>
+            <button onclick="agregarAlCarrito('FIFA 25', 50, 'cantidad-FIFA 25')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="Call of Duty" data-precio="80">
+            <img src="callodfuty.jpg" alt="Call of Duty">
+            <h3>Call of Duty</h3>
+            <p>80€</p>
+            <button onclick="cambiarCantidad('Call of Duty', -1)">-</button>
+            <span id="cantidad-Call of Duty">0</span>
+            <button onclick="cambiarCantidad('Call of Duty', 1)">+</button>
+            <button onclick="agregarAlCarrito('Call of Duty', 80, 'cantidad-Call of Duty')">Añadir</button>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <div class="producto" data-nombre="GTA V" data-precio="23">
+            <img src="gta.jpg" alt="GTA V">
+            <h3>GTA V</h3>
+            <p>23€</p>
+            <button onclick="cambiarCantidad('GTA V', -1)">-</button>
+            <span id="cantidad-GTA V">0</span>
+            <button onclick="cambiarCantidad('GTA V', 1)">+</button>
+            <button onclick="agregarAlCarrito('GTA V', 23, 'cantidad-GTA V')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="Red Dead Redemption" data-precio="15">
+            <img src="red.jpg" alt="Red Dead Redemption">
+            <h3>Red Dead Redemption</h3>
+            <p>15€</p>
+            <button onclick="cambiarCantidad('Red Dead Redemption', -1)">-</button>
+            <span id="cantidad-Red Dead Redemption">0</span>
+            <button onclick="cambiarCantidad('Red Dead Redemption', 1)">+</button>
+            <button onclick="agregarAlCarrito('Red Dead Redemption', 15, 'cantidad-Red Dead Redemption')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="Tekken" data-precio="25">
+            <img src="tekken.jpg" alt="Tekken">
+            <h3>Tekken</h3>
+            <p>25€</p>
+            <button onclick="cambiarCantidad('Tekken', -1)">-</button>
+            <span id="cantidad-Tekken">0</span>
+            <button onclick="cambiarCantidad('Tekken', 1)">+</button>
+            <button onclick="agregarAlCarrito('Tekken', 25, 'cantidad-Tekken')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="ARK" data-precio="85">
+            <img src="ark.jpg" alt="ARK">
+            <h3>ARK</h3>
+            <p>85€</p>
+            <button onclick="cambiarCantidad('ARK', -1)">-</button>
+            <span id="cantidad-ARK">0</span>
+            <button onclick="cambiarCantidad('ARK', 1)">+</button>
+            <button onclick="agregarAlCarrito('ARK', 85, 'cantidad-ARK')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="2K 25" data-precio="30">
+            <img src="2k.jpg" alt="2K 25">
+            <h3>2K 25</h3>
+            <p>30€</p>
+            <button onclick="cambiarCantidad('2K 25', -1)">-</button>
+            <span id="cantidad-2K 25">0</span>
+            <button onclick="cambiarCantidad('2K 25', 1)">+</button>
+            <button onclick="agregarAlCarrito('2K 25', 30, 'cantidad-2K 25')">Añadir</button>
+        </div>
+
+        <div class="producto" data-nombre="WWE" data-precio="65">
+            <img src="wwe.jpg" alt="WWE">
+            <h3>WWE</h3>
+            <p>65€</p>
+            <button onclick="cambiarCantidad('WWE', -1)">-</button>
+            <span id="cantidad-WWE">0</span>
+            <button onclick="cambiarCantidad('WWE', 1)">+</button>
+            <button onclick="agregarAlCarrito('WWE', 65, 'cantidad-WWE')">Añadir</button>
+        </div>
+    </div>
+
+    <!-- Carrito -->
+    <div class="carrito">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total: €<span id="total">0</span></strong></p>
+        <button onclick="mostrarFormulario()">Finalizar Compra</button>
+        <button id="vaciar-carrito">Vaciar Carrito</button>
+    </div>
+
+    <div id="mensaje-agregado" style="display: none; position: fixed; top: 20px; right: 20px; background-color: blue; color: white; padding: 10px; border-radius: 5px;">
+        Producto añadido al carrito!
+    </div>
+
+    <footer>
+        <p>Hecho por Víctor Lucenila y Pablo Tena </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
