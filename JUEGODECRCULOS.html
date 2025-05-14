@@ -6,7 +6,7 @@
   <style>
     body {
       background-color: white; /* Fondo blanco */
-      color:black
+      color: black; /* Se añadió punto y coma */
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 0;
@@ -36,7 +36,7 @@
       cursor: pointer;
     }
 
-    #score, #highScore {
+    #score, #highScore, #lastScore {
       margin-top: 10px;
       margin-bottom: 15px;
       font-size: 18px;
@@ -48,6 +48,7 @@
 
   <h1>Juego de Círculos</h1>
   <div id="highScore">Puntuación máxima: 0</div>
+  <div id="lastScore">Última puntuación: 0</div> <!-- Se añadió para mostrar la última puntuación -->
   <button id="startBtn">Iniciar Juego</button>
   <div id="gameArea"></div>
   <div id="score">Puntuación: 0</div>
@@ -59,7 +60,9 @@
       let gameActive = false;
       let timeoutId;
       let highScore = localStorage.getItem('highScore') || 0;
+      let lastScore = localStorage.getItem('lastScore') || 0;
       $('#highScore').text('Puntuación máxima: ' + highScore);
+      $('#lastScore').text('Última puntuación: ' + lastScore); // Mostrar la última puntuación
 
       function createCircle() {
         const gameArea = $('#gameArea');
@@ -111,6 +114,10 @@
         timeoutId = setTimeout(() => {
           gameActive = false;
           $('#gameArea').empty();
+
+          // Guardar la última puntuación
+          localStorage.setItem('lastScore', score);
+          $('#lastScore').text('Última puntuación: ' + score); // Actualizar la última puntuación
 
           if (score > highScore) {
             highScore = score;
