@@ -1,0 +1,63 @@
+<script>
+    document.getElementById('formularioSuscripcion').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita el envío del formulario
+    
+      // Limpia los mensajes de error
+      document.querySelectorAll('.error').forEach(function(error) {
+        error.style.visibility = 'hidden';
+      });
+    
+      let isValid = true;
+    
+      // Validación del nombre completo
+      let nombreCompleto = document.getElementById('nombreCompleto').value.trim();
+      if (nombreCompleto === '') {
+        document.getElementById('errorNombreCompleto').style.visibility = 'visible';
+        isValid = false;
+      }
+    
+      // Validación del correo electrónico
+      let correoElectronico = document.getElementById('correoElectronico').value.trim();
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (correoElectronico === '' || !emailPattern.test(correoElectronico)) {
+        document.getElementById('errorCorreoElectronico').style.visibility = 'visible';
+        isValid = false;
+      }
+    
+      // Validación del DNI
+      let dni = document.getElementById('dni').value.trim();
+      if (dni === '') {
+        document.getElementById('errorDNI').style.visibility = 'visible';
+        isValid = false;
+      }
+    
+      // Validación de las preferencias de contenido
+      let preferencias = document.querySelectorAll('input[name="preferencia"]:checked');
+      if (preferencias.length === 0) {
+        document.getElementById('errorPreferencias').style.visibility = 'visible';
+        isValid = false;
+      }
+    
+      // Validación de la frecuencia de envío
+      let frecuenciaEnvio = document.getElementById('frecuenciaEnvio').value;
+      if (frecuenciaEnvio === '') {
+        document.getElementById('errorFrecuenciaEnvio').style.visibility = 'visible';
+        isValid = false;
+      }
+    
+      // Validación de los términos y condiciones
+      let terminos = document.getElementById('terminos').checked;
+      if (!terminos) {
+        document.getElementById('errorTerminos').style.visibility = 'visible';
+        isValid = false;
+      }
+    
+      // Si todo es válido, se puede enviar el formulario
+      if (isValid) {
+        alert('Formulario enviado con éxito!');
+        // Aquí puedes agregar el código para enviar el formulario
+      }
+    });
+    </script>
+    
+    
